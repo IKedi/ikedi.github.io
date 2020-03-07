@@ -1,3 +1,7 @@
+if game.CoreGui:FindFirstChild("SGD") then
+	Game.CoreGui["SGD"]:Destroy()
+end
+
 local Shitgamedestroyer = Instance.new("ScreenGui")
 local Top = Instance.new("Frame")
 local Main = Instance.new("Frame")
@@ -96,12 +100,12 @@ local function textingsim()
 	end
 end
 
-local function start(a = true)
+local function start(a)
 	if gid == 4458733955 then
 		if a == false then amount.Text = 5 end
 		if a then bladesim() end
 	elseif gid == 3956818381 then
-		if a == false then amount.Visible = false label.Text = "Multiplier doesn't work in this game" end
+		if a == false then amount.Visible = false label.Text = "Multiplier doesn't work in this game" label.TextXAlignment = Enum.TextXAlignment.Left end
 		if a then ninjalegends() end
 	elseif gid == 2580982329 then
 		if a == false then amount.Text = 50 end
@@ -119,7 +123,7 @@ button.MouseButton1Click:Connect(function()
 	if button.Text == "Enable" then
 		button.Text = "Disable"
 		a = false
-		start()
+		start(true)
 	else
 		a = true
 		button.Text = "Enable"
