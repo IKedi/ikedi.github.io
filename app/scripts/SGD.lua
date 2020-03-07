@@ -68,9 +68,9 @@ local function bladesim()
 	local rem = game.ReplicatedStorage.Swing
 	while true do
 	    if a then return end
-		    for i = 1, tonumber(amount.Text) do
-		        rem:FireServer(100000)
-		    end
+		for i = 1, tonumber(amount.Text) do
+		    rem:FireServer(100000)
+		end
     	wait()
 	end
 end
@@ -78,18 +78,34 @@ local function ninjalegends()
 	local rem = game.Players.LocalPlayer.ninjaEvent
 	while true do
 	    if a then return end
-		    for i = 1, tonumber(amount.Text) do
-		        rem:FireServer("swingKatana")
-		    end
+		rem:FireServer("swingKatana")
+    	wait()
+	end
+end
+local function textingsim()
+	local rem = game:GetService("ReplicatedStorage").Events.SendTexts
+	while true do
+	    if a then return end
+		for i = 1, tonumber(amount.Text) do
+		    rem:FireServer("Phone")
+			rem:FireServer("Game")
+			rem:FireServer("Tablet")
+			rem:FireServer("Computer")
+		end
     	wait()
 	end
 end
 
-local function start()
+local function start(a = true)
 	if gid == 4458733955 then
-		bladesim()
+		if a == false then amount.Text = 5 end
+		if a then bladesim() end
 	elseif gid == 3956818381 then
-		ninjalegends()
+		if a == false then amount.Visible = false label.Text = "Multiplier doesn't work in this game" end
+		if a then ninjalegends() end
+	elseif gid == 2580982329 then
+		if a == false then amount.Text = 50 end
+		if a then textingsim() end
 	else
 		amount.Visible = false
 		button.Visible = false
@@ -109,3 +125,5 @@ button.MouseButton1Click:Connect(function()
 		button.Text = "Enable"
 	end
 end)
+
+start(false)
