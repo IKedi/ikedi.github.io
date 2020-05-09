@@ -1,1 +1,2 @@
 path=empty
+warn=true
