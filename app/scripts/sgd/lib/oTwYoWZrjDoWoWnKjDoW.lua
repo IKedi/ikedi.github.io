@@ -1,12 +1,5 @@
-local a=game.Players.LocalPlayer.PlayerGui:WaitForChild('Fakt_SGD').Drag.Main.Body.Start_butt;local b=false
+local _G.b=false
 while wait(0.5) do
-	if b then return;print'biggergay';end
+	if b then return;end
 	print'luggi'
 end
-a.Changed:Connect(function()
-	wait()
-	if a.Text == "Start" then
-		b = true
-			print'gay'
-	end
-end)
