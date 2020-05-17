@@ -1,3 +1,6 @@
+print'a'
+return
+
 local m_sb = game.Players.LocalPlayer.PlayerGui.Fakt_SGD.Drag.Main.Body.Start_butt
 local a = false
 
