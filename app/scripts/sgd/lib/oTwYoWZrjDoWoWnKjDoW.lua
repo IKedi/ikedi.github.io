@@ -2,5 +2,5 @@
 _G.b=false
 while wait(0.5) do
 	if _G.b then return;end
-	print'oof
+	print'oof'
 end
