@@ -1,4 +1,4 @@
---|Multiplier:Wait time (if laggy)|--
+--|Multiplier:Wait time (if laggy)|,|AutoSell:false|,|By:IKedi|--
 _G.sgd_kill = false
 while wait() do
 	local rem = game:GetService("ReplicatedStorage").Network
@@ -13,7 +13,7 @@ while wait() do
 			for i, _c in ipairs(game:GetService("Workspace").Loots:GetChildren()) do
 				o:FireServer("CollectLoot", _c)
 			end
-			wait(amount.Text)
+			wait(tonumber(_G.multiplier))
 		end
 	end  
 end
