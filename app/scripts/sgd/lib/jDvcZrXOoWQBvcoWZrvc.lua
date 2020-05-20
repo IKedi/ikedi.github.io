@@ -1,4 +1,4 @@
---|Multiplier:30|--
+--|Multiplier:30||,|AutoSell:true|,|By:IKedi|
 _G.sgd_kill = false
 while wait() do
 	if _G.sgd_kill then return end
