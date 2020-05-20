@@ -1,4 +1,4 @@
---|Multiplier:5|--
+--|Multiplier:5|,|AutoSell:false|,|By:IKedi|--
 _G.sgd_kill = false
 local rem = game.ReplicatedStorage.Swing
 while wait() do
