@@ -1,4 +1,4 @@
---|Multiplier:doesn't work in this game.|--
+--|Multiplier:doesn't work in this game.|,|AutoSell:false|,|By:IKedi|--
 _G.sgd_kill = false
 local rem = game:GetService("ReplicatedStorage").Events.Train
 while wait() do
