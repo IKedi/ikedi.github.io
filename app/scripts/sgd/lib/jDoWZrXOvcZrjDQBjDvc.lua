@@ -1,5 +1,4 @@
 --|Multiplier:50|,|AutoSell:false|,|By:IKedi|--
-_G.sgd_kill = false
 local rem = game:GetService("ReplicatedStorage").Events.SendTexts
 while wait() do
 	if _G.sgd_kill then return end

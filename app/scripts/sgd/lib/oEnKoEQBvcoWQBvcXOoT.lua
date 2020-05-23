@@ -1,5 +1,4 @@
 --|Multiplier:Wait time (if laggy)|,|AutoSell:false|,|By:IKedi|--
-_G.sgd_kill = false
 while wait() do
 	local rem = game:GetService("ReplicatedStorage").Network
 	if _G.sgd_kill then return end
