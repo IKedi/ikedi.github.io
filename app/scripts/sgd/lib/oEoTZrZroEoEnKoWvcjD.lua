@@ -1,4 +1,4 @@
---|Multiplier:true@Auto sell (true, false)|,|AutoSell:use syn_mouse1click()|,|By:IKedi|
+--|Multiplier:true@Auto sell (true/false)|,|AutoSell:use syn_mouse1click()|,|By:IKedi|
 
 local st = game.Players.LocalPlayer.PlayerGui.Bin.UIs.CurrencyUi.Strength.Num
 local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
