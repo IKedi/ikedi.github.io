@@ -561,10 +561,17 @@ local function getsettings()
 		local _e = set.split(set, ',')
 		---
 		_G.multiplier = string.split(string.split(_e[1], '|')[2], ':')[2]
+		if string.split(string.split(_e[1], '|')[2], ':')[2]:find('@') then
+			Multiplier_label.Text = string.split(string.split(string.split(_e[1], '|')[2], ':')[2], '@')[2]
+		end
 		scredit_label.Text = 'Script made by '..string.split(string.split(_e[3], '|')[2], ':')[2]
 		
-		if string.split(string.split(_e[2], '|')[2], ':')[2] == 'false' then
+		local __ascheck = string.split(string.split(_e[2], '|')[2], ':')[2]
+
+		if __ascheck == 'false' then
 			AS_label:Destroy()
+		elseif __ascheck ~= 'false' and __ascheck ~= 'true' then
+			AS_label.Text = __ascheck
 		end
 		---
 		return
