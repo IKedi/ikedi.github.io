@@ -7,8 +7,8 @@ while wait() do
     if _G.sgd_kill then return;end
     local _g = false
     local _s = string.split(st.Text, '/')
-    local _m = tonumber(_s[2])
-    local _c = tonumber(_s[1])
+    local _m = _s[2]
+    local _c = _s[1]
     
     if _c == _m then _g = false else _g = true end
     
