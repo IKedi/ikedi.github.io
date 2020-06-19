@@ -461,32 +461,34 @@ local function visual()
 	return
 end
 
-local function num_encryption(arg1, arg2)
-	if arg2 then
-		arg1 = arg1:gsub('0', 'XO')
-		arg1 = arg1:gsub('1', 'oT')
-		arg1 = arg1:gsub('2', 'jD')
-		arg1 = arg1:gsub('3', 'QB')
-		arg1 = arg1:gsub('4', 'oE')
-		arg1 = arg1:gsub('5', 'oW')
-		arg1 = arg1:gsub('6', 'wY')
-		arg1 = arg1:gsub('7', 'nK')
-		arg1 = arg1:gsub('8', 'Zr')
-		arg1 = arg1:gsub('9', 'vc')
+local function num_encryption(input, encrypt)
+	if encrypt then
+		input = input:gsub('0', 'XO')
+		input = input:gsub('1', 'oT')
+		input = input:gsub('2', 'jD')
+		input = input:gsub('3', 'QB')
+		input = input:gsub('4', 'oE')
+		input = input:gsub('5', 'oW')
+		input = input:gsub('6', 'wY')
+		input = input:gsub('7', 'nK')
+		input = input:gsub('8', 'Zr')
+		input = input:gsub('9', 'vc')
 	else
-		arg1 = arg1:gsub('XO', '0')
-		arg1 = arg1:gsub('oT', '1')
-		arg1 = arg1:gsub('jD', '2')
-		arg1 = arg1:gsub('QB', '3')
-		arg1 = arg1:gsub('oE', '4')
-		arg1 = arg1:gsub('oW', '5')
-		arg1 = arg1:gsub('wY', '6')
-		arg1 = arg1:gsub('nK', '7')
-		arg1 = arg1:gsub('Zr', '8')
-		arg1 = arg1:gsub('vc', '9')
+		input = input:gsub('XO', '0')
+		input = input:gsub('oT', '1')
+		input = input:gsub('jD', '2')
+		input = input:gsub('QB', '3')
+		input = input:gsub('oE', '4')
+		input = input:gsub('oW', '5')
+		input = input:gsub('wY', '6')
+		input = input:gsub('nK', '7')
+		input = input:gsub('Zr', '8')
+		input = input:gsub('vc', '9')
 	end
-	return arg1
+	return input
 end
+
+gameid = num_encryption(tostring(gameid), true)
 
 local function gensupgames()
 	local _gid = game:HttpGet('https://api.github.com/repos/IKedi/ikedi.github.io/contents/app/scripts/sgd/lib')
@@ -498,6 +500,10 @@ local function gensupgames()
 			_gid = string.split(oof, '"')[2]
 			_gid = string.split(_gid, '.')[1]
 			_gid = num_encryption(_gid, false)
+
+			if _gid == num_encryption(tostring(gameid), false) then
+				gamesup = true 
+			end
 
 			local _gamename = game:GetService("MarketplaceService"):GetProductInfo(_gid).Name
 
@@ -511,7 +517,7 @@ local function gensupgames()
 			gen.Size = UDim2.new(0, 228, 0, 50)
 			gen.ZIndex = 0
 			gen.Font = Enum.Font.GothamBold
-			gen.Text = _gamename..' ('..tostring(_gid)..')'
+			gen.Text = _gamename..' ('.._gid..')'
 			gen.TextColor3 = Color3.fromRGB(255, 255, 255)
 			gen.TextScaled = true
 			gen.TextSize = 14.000
@@ -526,19 +532,14 @@ local function gensupgames()
 			lib_scroll.CanvasSize = UDim2.new(_cs.X.Scale, _cs.X.Offset, _cs.Y.Scale, _cs.Y.Offset + 30)
 		end
 	end
-end
-
-gameid  = num_encryption(tostring(gameid), true)
-
-if string.find(game:HttpGet("https://github.com/IKedi/ikedi.github.io/tree/master/app/scripts/sgd/lib"), gameid..'.lua') then
-	gamesup = true
-else
-	gamesup = false
-	notify('This game is not supported.')
-	for i, _o in ipairs(Body:GetChildren()) do
-		_o.Visible = false
+	if not gamesup then
+		notify('This game is not supported.')
+		for i, _o in ipairs(Body:GetChildren()) do
+			_o.Visible = false
+		end
 	end
 end
+gensupgames()
 wait(0.1)
 
 -----
@@ -563,6 +564,7 @@ local function getsettings()
 		_G.multiplier = string.split(string.split(_e[1], '|')[2], ':')[2]
 		if string.split(string.split(_e[1], '|')[2], ':')[2]:find('@') then
 			Multiplier_label.Text = string.split(string.split(string.split(_e[1], '|')[2], ':')[2], '@')[2]
+			_G.multiplier = string.split(string.split(string.split(_e[1], '|')[2], ':')[2], '@')[1]
 		end
 		scredit_label.Text = 'Script made by '..string.split(string.split(_e[3], '|')[2], ':')[2]
 		
@@ -581,7 +583,9 @@ local function getsettings()
 	visual()
 	return
 end
+
 getsettings()
+
 -----
 local function run()
 	if _G.sgd_kill then
@@ -755,8 +759,6 @@ UserInputService.InputChanged:Connect(function(input)
 	end
 end)
 ----------
-
-gensupgames()
 visual()
 togglegui()
 
