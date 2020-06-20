@@ -105,3 +105,5 @@ Modified Auto Sell Check box:
 You should find an file with lua extension on where ```writefile()``` creates it
 
 (It will be in 'workspace' folder if you are using Synapse X. I don't know where other exploits output to)
+
+Then you can send that file to IKedi#0001 (326438326272000000) on Discord
