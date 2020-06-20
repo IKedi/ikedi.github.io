@@ -102,7 +102,7 @@ Modified Auto Sell Check box:
 
 ### Once you press 'Confirm'
 
-You should find an file with lua extension on where ```writefile()``` creates it
+You should find an file with '.lua' extension on where ```writefile()``` creates it
 
 (It will be in 'workspace' folder if you are using Synapse X. I don't know where other exploits output to)
 
