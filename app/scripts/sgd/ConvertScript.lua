@@ -1,3 +1,16 @@
+return
+
+--Not done (use the script below)
+
+
+
+
+
+
+
+
+
+
 local info = {
     multiplier = '1', --If you need something other than multiplier then 'SomethingOtherThanMultiplier@Value'
 	autosell = 'false', --If you need something other than auto sell then just change the value to it
