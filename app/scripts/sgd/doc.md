@@ -62,6 +62,8 @@ There are 3 modifiers on there
 - Multiplier
 - Auto Sell
 
+Creator will set input as creater of the script
+
 Multiplier will change scripts default multiplier
 
 If Auto Sell is set to 'false' Auto Sell will **not** appear on the gui
