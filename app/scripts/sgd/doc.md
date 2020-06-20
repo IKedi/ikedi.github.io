@@ -1,5 +1,7 @@
 # Creating scripts
 
+**YOU NEED AN EXPLOIT THAT SUPPORTS** ```writefile()``` **FUNCTION**
+
 You need to execute this script to get the gui:
 
 ```lua
@@ -97,3 +99,9 @@ Modified Auto Sell Check box:
 - Auto Sell set to Kill on finish
 
 ```Kill on finish: [x]```
+
+### Once you press 'Confirm'
+
+You should find an file with lua extension on where ```writefile()``` creates it
+
+(It will be in 'workspace' folder if you are using Synapse X. I don't know where other exploits output to)
