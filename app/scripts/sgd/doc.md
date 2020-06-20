@@ -66,6 +66,8 @@ Multiplier will change scripts default multiplier
 
 If Auto Sell is set to 'false' Auto Sell will **not** appear on the gui
 
+### Modifying SGD gui
+
 You can modify the main SGD gui with this Example:
 
 Regular Multiplier box:
@@ -79,3 +81,19 @@ Modified Multiplier box:
 - Multiplier set to Player health@100
 
 ```Player health: 100```
+
+#### Changing Auto Sell
+
+Regular Auto Sell Check box:
+
+- Multiplier set to 'true'
+
+```Auto Sell: [x]```
+
+Modified Auto Sell Check box:
+
+- Auto Sell set to Kill on finish
+
+```Kill on finish: [x]```
+
+``````
