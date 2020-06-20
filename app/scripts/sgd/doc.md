@@ -95,5 +95,3 @@ Modified Auto Sell Check box:
 - Auto Sell set to Kill on finish
 
 ```Kill on finish: [x]```
-
-``````
