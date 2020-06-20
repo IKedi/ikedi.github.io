@@ -1,5 +1,5 @@
 local module = {}
-    function module.Convert(script_, info)
+    function module.Convert(player, script_, info)
         local _sinfo = '--'
 
         local function num_encryption(input) --'Encryption' so skids won't patch their game when they see it on the github
