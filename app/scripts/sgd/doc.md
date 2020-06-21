@@ -72,7 +72,7 @@ If Auto Sell is set to 'false' Auto Sell will **not** appear on the gui
 
 ### Modifying SGD gui
 
-You can modify the main SGD gui with this Example:
+You can modify the main SGD gui with this example:
 
 Regular Multiplier box:
 
@@ -82,7 +82,7 @@ Regular Multiplier box:
 
 Modified Multiplier box:
 
-- Multiplier set to Player health@100
+- Multiplier set to 'Player health@100'
 
 ```Player health: 100```
 
@@ -96,7 +96,7 @@ Regular Auto Sell Check box:
 
 Modified Auto Sell Check box:
 
-- Auto Sell set to Kill on finish
+- Auto Sell set to 'Kill on finish'
 
 ```Kill on finish: [x]```
 
