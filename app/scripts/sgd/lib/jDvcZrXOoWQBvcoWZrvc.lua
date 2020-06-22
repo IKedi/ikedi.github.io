@@ -1,4 +1,4 @@
---|Multiplier:30|,|AutoSell:true|,|By:IKedi|
+--Multiplier:30,AutoSell:true,By:IKedi--
 while wait() do
 	if _G.sgd_kill then return end
 	for i = 1, tonumber(_G.multiplier) do

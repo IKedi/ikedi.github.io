@@ -1,4 +1,4 @@
---|Multiplier:doesn't work in this game.|,|AutoSell:use syn_mouse1click()|,|By:IKedi|
+--Multiplier:doesn't work in this game.,AutoSell:use syn_mouse1click(),By:IKedi--
 
 local st = game.Players.LocalPlayer.PlayerGui.Bin.UIs.CurrencyUi.Strength.Num
 local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
