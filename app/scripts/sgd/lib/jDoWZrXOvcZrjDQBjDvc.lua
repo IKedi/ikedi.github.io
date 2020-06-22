@@ -9,10 +9,10 @@ while wait() do
 		rem:FireServer("Computer")
 	end
 	if _G.sgd_autosell then
-   	    for i, o in ipairs(workspace.Gems:GetChildren()) do
-       		o.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-       		wait(0.1)
-       		o:Destroy()
-	    end
+		   for i, o in ipairs(workspace.Gems:GetChildren()) do
+			o.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			wait(0.1)
+			o:Destroy()
+		end
 	end
 end
