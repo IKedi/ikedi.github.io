@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+    <head>
+        <script src="resources/js/player.js" defer></script>
+        <script src="resources/js/blockdata.js"></script>
+        <script src="resources/js/main.js" defer></script>
+        
+        <title>Best website design ever</title>
+        <link rel="icon" href="sources/favicon/icon.png">
+
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(16, 64px);/*Change isMultiple and newData on main.js*/
+                padding: 8px;
+            }
+            .grid-item {
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 16px;
+                max-width: 16;
+                max-height: 16;
+                font-size: auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="openFileDialog" accept=".json" type="file" onchange="fileExists()">
+        <button id="button1" onclick="readFile()" disabled>Load</button>
+        <button id="button2" onclick="saveFile()">Save</button>
+        <button id="button3" onclick="createWorld()">Create a new world!</button>
+        <p>----------------------------------------------------------------------------------</p>
+
+        <div id="gridMain" class="grid-container"></div>
+    </body>
+</html>
